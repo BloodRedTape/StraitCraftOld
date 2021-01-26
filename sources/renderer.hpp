@@ -4,7 +4,10 @@
 #include "platform/glcontext.hpp"
 #include "platform/opengl.hpp"
 #include "servers/display_server.hpp"
-#include "chunk_renderer.hpp"
+#include "camera.hpp"
+#include "world.hpp"
+#include "mesh.hpp"
+#include "mesh_renderer.hpp"
 
 using namespace StraitX;
 
@@ -14,7 +17,7 @@ private:
     Window &m_Window = DisplayServer::Instance().GetWindow();
     const Vector3f m_SkyColor = {0.2, 0.8, 1.0};
 public:
-    ChunkRenderer m_ChunkRenderer;
+    MeshRenderer m_MeshRenderer;
 
     void Initialize();
 

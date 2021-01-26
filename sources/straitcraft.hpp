@@ -15,7 +15,7 @@ using namespace StraitX;
 class StraitCraft: public Application{
 private:
     Renderer m_Renderer;
-    World m_World;
+    World *m_World;
 public:
     StraitCraft();
 

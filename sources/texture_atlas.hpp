@@ -48,4 +48,6 @@ struct TextureAtlas{
     Pair<Vector2f,Vector2f> Get(TextureName tex);
 };
 
+extern TextureAtlas Atlas;
+
 #endif //TEXTURE_ATLAS_HPP

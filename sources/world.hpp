@@ -3,17 +3,22 @@
 
 #include "platform/types.hpp"
 #include "chunk.hpp"
-#include "chunk_renderer.hpp"
-
-constexpr size_t WorldSizeX = 4;
-constexpr size_t WorldSizeY = 4;
+#include "mesh_renderer.hpp"
 
 class World{
 private:
-    Chunk m_Chunks[WorldSizeX][WorldSizeY];
+    const Vector2u m_Size = {0, 0};
+    Chunk **m_Chunks = nullptr;
+    Mesh **m_ChunkMeshes = nullptr;
+    u64 m_Seed = 0;
 public:
+    World(const Vector2u &size, u64 seed);
 
-    void Draw(ChunkRenderer &renderer);
+    void Generate();
+
+    void Render(MeshRenderer &renderer);
+
+    ~World();
 
 };
 

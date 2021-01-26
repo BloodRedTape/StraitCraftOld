@@ -12,24 +12,21 @@ void Renderer::Initialize(){
 
     glClearColor(m_SkyColor.x, m_SkyColor.y, m_SkyColor.z, 1.0);
 
-    m_ChunkRenderer.Initialize();
+    m_MeshRenderer.Initialize();
 }
 
 void Renderer::BeginFrame(const FPSCamera &camera){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    m_ChunkRenderer.BeginFrame(camera);
+    m_MeshRenderer.BeginFrame(camera);
 }
 
 
 void Renderer::EndFrame(){
-    m_ChunkRenderer.EndFrame();
-
+    m_MeshRenderer.EndFrame();
     m_Context.SwapBuffers();
 }
 
 void Renderer::Finalize(){
-    m_ChunkRenderer.Finalize();
-
+    m_MeshRenderer.Finalize();
     m_Context.Destroy();
 }

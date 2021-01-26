@@ -51,38 +51,6 @@ StraitCraft::~StraitCraft(){
 Vector2i WindowSize(GameConfig.WindowSize);
 Vector2i ScreenSize(1920, 1080);
 
-Vertex Vertices[]={
-    {{ 50,  0, 0.0},{1,0,0}},
-    {{-50,  0, 0.0},{0,1,0}},
-    {{  0, 50, 0.0},{0,0,1}}
-};
-
-Vertex Cube[]={
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}},
-    {{ 0.5,  0.5, 0.5},{1,0,0}}
-};
-
-u32 Indices[] = {
-    2, 1, 0
-};
-
 FPSCamera PlayerCamera = Camera::Orthographic(WindowSize.x, WindowSize.y, 0, 50000);
 
 Result StraitCraft::OnInitialize(){
@@ -90,7 +58,11 @@ Result StraitCraft::OnInitialize(){
 
     m_Renderer.Initialize();
 
-    //m_Chunk->Data[12][12][255] = Block::Air;
+    Atlas.Initialize();
+    Atlas.MainTexture.Bind(0);
+
+    m_World = new World{Vector2u(32, 32), 234234234};
+
     PlayerCamera.MoveY(50 * 30);
 
     return Result::Success;
@@ -133,30 +105,7 @@ void StraitCraft::OnUpdate(float dt){
 
     m_Renderer.BeginFrame(PlayerCamera);
     {
-        /*
-        for(int i = 0; i < 20; i++){
-            for(int j = 0; j<20; j++)
-                Block(i,0,j,Block::Grass);
-        }
-        for(int i = 0; i < (int)Block::BlocksCount; i++)
-            Block(i,1,9,(Block)i);
-        
-        Block(3,1,3,Block::Emerald);
-        Block(3,1,4,Block::Iron);
-        Block(3,2,4,Block::Iron);
-        Block(3,3,4,Block::Iron);
-        Block(3,4,4,Block::Gold);
-        Block(3,1,5,Block::Emerald);
-        
-
-        Tree(6,1,6);
-
-        Tree(16,1,12);
-
-        Tree(1,1,18);
-        */
-
-        m_World.Draw(m_Renderer.m_ChunkRenderer);
+        m_World->Render(m_Renderer.m_MeshRenderer);
     }
     m_Renderer.EndFrame();
 
@@ -164,6 +113,10 @@ void StraitCraft::OnUpdate(float dt){
 }
     
 Result StraitCraft::OnFinalize(){
+
+    delete m_World;
+
+    Atlas.Finalize();
 
     m_Renderer.Finalize();
 

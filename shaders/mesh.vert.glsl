@@ -16,7 +16,7 @@ out vec2 v_TexCoords;
 void main(void){
     gl_Position = in_Projection * in_View * vec4(in_Position, 1.0);
     if(gl_Position.z < 0)
-        gl_Position.z = 10;
+        gl_Position.z = 10; // TODO this shit causes 2x fps fall
     gl_Position.x /=u_FOV;
     gl_Position.y /=u_FOV;
     gl_Position.x /= gl_Position.z;

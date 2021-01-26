@@ -12,10 +12,13 @@ set(SANDBOX_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/sources/camera.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/sources/math.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/sources/renderer.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/sources/block_renderer.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/sources/chunk_renderer.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/sources/block_builder.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/sources/chunk_builder.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/sources/mesh_renderer.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/sources/mesh.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/sources/blocks.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/sources/world.cpp   
+    ${CMAKE_CURRENT_SOURCE_DIR}/sources/chunk.cpp   
     ${CMAKE_CURRENT_SOURCE_DIR}/sources/stb_image.c
 )
 

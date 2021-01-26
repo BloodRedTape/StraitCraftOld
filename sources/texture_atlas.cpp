@@ -1,5 +1,7 @@
 #include "texture_atlas.hpp"
 
+TextureAtlas Atlas;
+
 constexpr const char *AtlasPath = "resources/texture_atlas.png";
 
 void TextureAtlas::Initialize(){
