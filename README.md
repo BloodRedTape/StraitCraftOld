@@ -1,2 +1,2 @@
-# StraitX Sanbox
-## Simple sandbox project to build something with StraitX
+# StraitCraft
+## I wanted something to relax from Vulkan, so i did this
