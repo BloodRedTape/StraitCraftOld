@@ -35,13 +35,21 @@ struct Chunk{
                 Data[i][j][height] = Block::Grass;
                 if(rand()%40 == 3)
                     Tree({i,j,height+1});
-                Data[i][j][0] = Block::Emerald;
+                Data[i][j][0] = Block::Bedrock;
                 for(int k = 1; k<std::min(height, ChunkSizeZ); k++){
                     if(k < height - 2)
-                        if(rand()%20 == 2)
-                            Data[i][j][k] = Block::Gold;
+                        if(rand()%40 == 2 && k < 5)
+                            Data[i][j][k] = Block::DiamondOre;
+                        else if(rand()%40 == 5)
+                            Data[i][j][k] = Block::IronOre;
+                        else if(rand()%40 == 8 && k < 8)
+                            Data[i][j][k] = Block::GoldOre;
+                        else if(rand()%80 == 8 && k < 8)
+                            Data[i][j][k] = Block::EmeraldOre;
+                        else if(rand()%20 == 5)
+                            Data[i][j][k] = Block::CoalOre;
                         else
-                            Data[i][j][k] = Block::Iron;
+                            Data[i][j][k] = Block::Stone;
                     else
                         Data[i][j][k] = Block::Dirt;
                 }

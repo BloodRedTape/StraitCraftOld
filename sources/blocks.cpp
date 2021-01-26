@@ -10,5 +10,13 @@ BlockTextureData BlockTextures[(int)Block::BlocksCount]={
     {TextureName::IronBlock},
     {TextureName::OakLogTop, TextureName::OakLogTop, TextureName::OakLog},
     {TextureName::OakPlanks},
-    {TextureName::OakLeaves}
+    {TextureName::OakLeaves},
+    {TextureName::DiamondOre},
+    {TextureName::EmeraldOre},
+    {TextureName::GoldOre},
+    {TextureName::IronOre},
+    {TextureName::Cobblestone},
+    {TextureName::Stone},
+    {TextureName::CoalOre},
+    {TextureName::Bedrock}
 };

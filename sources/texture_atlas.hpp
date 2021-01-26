@@ -20,6 +20,16 @@ enum class TextureName: u8{
     OakPlanks,
 
     OakLeaves,
+
+    DiamondOre,
+    EmeraldOre,
+    GoldOre,
+    IronOre,
+    Cobblestone,
+    Stone,
+    CoalOre,
+
+    Bedrock,
     
     ElementsCount
 };

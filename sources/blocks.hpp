@@ -17,6 +17,16 @@ enum class Block: u8{
 
     OakLeaves,
 
+    DiamondOre,
+    EmeraldOre,
+    GoldOre,
+    IronOre,
+    Cobblestone,
+    Stone,
+    CoalOre,
+
+    Bedrock,
+
     BlocksCount
 };
 
