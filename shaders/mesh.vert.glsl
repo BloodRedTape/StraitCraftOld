@@ -1,8 +1,7 @@
 #version 440 core
 
 layout(location = 0)in vec3 in_Position;
-layout(location = 1)in vec3 in_Color;
-layout(location = 2)in vec2 in_TexCoords;
+layout(location = 1)in vec2 in_TexCoords;
 
 layout (std140, binding = 0) uniform Matrices{
     mat4 in_Projection;  
@@ -10,7 +9,6 @@ layout (std140, binding = 0) uniform Matrices{
     float u_FOV;
 };
 
-out vec3 v_Color;
 out vec2 v_TexCoords;
 
 void main(void){
@@ -22,7 +20,5 @@ void main(void){
     gl_Position.x /= gl_Position.z;
     gl_Position.y /= gl_Position.z;
 
-
-    v_Color = in_Color;
     v_TexCoords = in_TexCoords;
 }

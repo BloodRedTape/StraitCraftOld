@@ -7,7 +7,6 @@ void MeshRenderer::Initialize(){
 
     VertexAttribute attrs[] = {
         VertexAttribute::Float3,
-        VertexAttribute::Float3,
         VertexAttribute::Float2
     };
 

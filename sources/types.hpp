@@ -7,7 +7,6 @@ using namespace StraitX;
 
 struct Vertex{
     Vector3f Position;
-    Vector3f Color;
     Vector2f TexCoords;
 };
 

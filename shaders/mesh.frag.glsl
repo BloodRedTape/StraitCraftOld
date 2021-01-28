@@ -1,6 +1,5 @@
 #version 440 core
 
-in vec3 v_Color;
 in vec2 v_TexCoords;
 
 uniform sampler2D u_Texture;

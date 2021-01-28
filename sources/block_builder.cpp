@@ -23,40 +23,40 @@ FaceIndexData &FaceIndexData::Bias(u32 face_number){
 
 FaceVertexData FaceVertices[(int)BlockFace::ElementsCount]{
     { // Face::Top
-        Vertex{{ -BlockSize/2,   BlockSize/2,  BlockSize/2},{0,0,0}, {0,1}},
-        Vertex{{  BlockSize/2,   BlockSize/2,  BlockSize/2},{1,0,0}, {1,1}},
-        Vertex{{ -BlockSize/2,   BlockSize/2, -BlockSize/2},{0,1,0}, {0,0}},
-        Vertex{{  BlockSize/2,   BlockSize/2, -BlockSize/2},{1,1,0}, {1,0}}
+        Vertex{{ -BlockSize/2,   BlockSize/2,  BlockSize/2}, {0,1}},
+        Vertex{{  BlockSize/2,   BlockSize/2,  BlockSize/2}, {1,1}},
+        Vertex{{ -BlockSize/2,   BlockSize/2, -BlockSize/2}, {0,0}},
+        Vertex{{  BlockSize/2,   BlockSize/2, -BlockSize/2}, {1,0}}
     },
     { // Face::Bottom
-        Vertex{{  BlockSize/2,  -BlockSize/2,  BlockSize/2},{0,0,0}, {0,1}},
-        Vertex{{ -BlockSize/2,  -BlockSize/2,  BlockSize/2},{1,0,0}, {1,1}},
-        Vertex{{  BlockSize/2,  -BlockSize/2, -BlockSize/2},{0,1,0}, {0,0}},
-        Vertex{{ -BlockSize/2,  -BlockSize/2, -BlockSize/2},{1,1,0}, {1,0}}
+        Vertex{{  BlockSize/2,  -BlockSize/2,  BlockSize/2}, {0,1}},
+        Vertex{{ -BlockSize/2,  -BlockSize/2,  BlockSize/2}, {1,1}},
+        Vertex{{  BlockSize/2,  -BlockSize/2, -BlockSize/2}, {0,0}},
+        Vertex{{ -BlockSize/2,  -BlockSize/2, -BlockSize/2}, {1,0}}
     },
     { // Face::Left
-        Vertex{{ -BlockSize/2,   BlockSize/2,  BlockSize/2},{0,0,0}, {0,1}},
-        Vertex{{ -BlockSize/2,   BlockSize/2, -BlockSize/2},{1,0,0}, {1,1}},
-        Vertex{{ -BlockSize/2,  -BlockSize/2,  BlockSize/2},{0,1,0}, {0,0}},
-        Vertex{{ -BlockSize/2,  -BlockSize/2, -BlockSize/2},{1,1,0}, {1,0}}
+        Vertex{{ -BlockSize/2,   BlockSize/2,  BlockSize/2}, {0,1}},
+        Vertex{{ -BlockSize/2,   BlockSize/2, -BlockSize/2}, {1,1}},
+        Vertex{{ -BlockSize/2,  -BlockSize/2,  BlockSize/2}, {0,0}},
+        Vertex{{ -BlockSize/2,  -BlockSize/2, -BlockSize/2}, {1,0}}
     },
     { // Face::Right
-        Vertex{{  BlockSize/2,   BlockSize/2, -BlockSize/2},{0,0,0}, {0,1}},
-        Vertex{{  BlockSize/2,   BlockSize/2,  BlockSize/2},{1,0,0}, {1,1}},
-        Vertex{{  BlockSize/2,  -BlockSize/2, -BlockSize/2},{0,1,0}, {0,0}},
-        Vertex{{  BlockSize/2,  -BlockSize/2,  BlockSize/2},{1,1,0}, {1,0}}
+        Vertex{{  BlockSize/2,   BlockSize/2, -BlockSize/2}, {0,1}},
+        Vertex{{  BlockSize/2,   BlockSize/2,  BlockSize/2}, {1,1}},
+        Vertex{{  BlockSize/2,  -BlockSize/2, -BlockSize/2}, {0,0}},
+        Vertex{{  BlockSize/2,  -BlockSize/2,  BlockSize/2}, {1,0}}
     },
     { // Face::Front
-        Vertex{{  BlockSize/2,   BlockSize/2,  BlockSize/2},{1,1,0}, {0,1}},
-        Vertex{{ -BlockSize/2,   BlockSize/2,  BlockSize/2},{0,0,0}, {1,1}},
-        Vertex{{  BlockSize/2,  -BlockSize/2,  BlockSize/2},{0,1,0}, {0,0}},
-        Vertex{{ -BlockSize/2,  -BlockSize/2,  BlockSize/2},{1,0,0}, {1,0}}
+        Vertex{{  BlockSize/2,   BlockSize/2,  BlockSize/2}, {0,1}},
+        Vertex{{ -BlockSize/2,   BlockSize/2,  BlockSize/2}, {1,1}},
+        Vertex{{  BlockSize/2,  -BlockSize/2,  BlockSize/2}, {0,0}},
+        Vertex{{ -BlockSize/2,  -BlockSize/2,  BlockSize/2}, {1,0}}
     },
     { // Face::Back
-        Vertex{{ -BlockSize/2,   BlockSize/2, -BlockSize/2},{1,1,0}, {0,1}},
-        Vertex{{  BlockSize/2,   BlockSize/2, -BlockSize/2},{0,0,0}, {1,1}},
-        Vertex{{ -BlockSize/2,  -BlockSize/2, -BlockSize/2},{0,1,0}, {0,0}},
-        Vertex{{  BlockSize/2,  -BlockSize/2, -BlockSize/2},{1,0,0}, {1,0}}
+        Vertex{{ -BlockSize/2,   BlockSize/2, -BlockSize/2}, {0,1}},
+        Vertex{{  BlockSize/2,   BlockSize/2, -BlockSize/2}, {1,1}},
+        Vertex{{ -BlockSize/2,  -BlockSize/2, -BlockSize/2}, {0,0}},
+        Vertex{{  BlockSize/2,  -BlockSize/2, -BlockSize/2}, {1,0}}
     }
 };
 
